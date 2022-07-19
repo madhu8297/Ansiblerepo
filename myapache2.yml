@@ -1,0 +1,12 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: Install the version of p nginx
+    apt:
+     name: nginx
+     state: present
+  - name: restart webserver
+    service:
+     name: nginx
+     state: restarted
