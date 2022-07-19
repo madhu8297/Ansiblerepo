@@ -2,11 +2,8 @@
 - hosts: all
   become: yes
   tasks:
-  - name: Install the version of p nginx
+  - name: Install the apache2
     apt:
-     name: nginx
+     name: apache2
      state: present
-  - name: restart webserver
-    service:
-     name: nginx
-     state: restarted
+  
